@@ -108,7 +108,7 @@ namespace SettMod.SkillStates
         public override void OnEnter()
         {
             base.OnEnter();
-            this.damageCoefficient = Modules.Config.faceBreakerDamageCoefficient.Value;
+            this.damageCoefficient = 0.5f;
             base.characterBody.SetAimTimer(2f);
             this.duration = this.baseDuration / this.attackSpeedStat;
             this.startUp = this.startUp / this.attackSpeedStat;

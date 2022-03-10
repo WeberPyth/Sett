@@ -13,11 +13,11 @@ namespace SettMod.Modules
         public const string characterSubtitle = "The Boss";
 
         public static string descriptionText =
-             "Sett is this Boss: a self-made, half-Vastayan, half-Noxian entrepreneur and fighter running Ionia's underground fighting pits.<color=#CCD3E0>" + Environment.NewLine + Environment.NewLine
-             + "< ! > Sett's basic attacks alternate between left and right punch. Right punch is slightly stronger and faster. Sett also hates losing, gaining additional health regeneration based off of his missing health." + Environment.NewLine + Environment.NewLine
-             + "< ! > Sett pulls in all enemies on opposite sides of him, dealing damage and stunning them. If enemies were only on one side, they are slowed instead of stunned." + Environment.NewLine + Environment.NewLine
-             + "< ! > Sett carries an enemy champion through the air and slams them into the ground, dealing damage and slowing all enemies near where they land." + Environment.NewLine + Environment.NewLine
-             + "< ! > Sett passively stores damage he takes as Grit. On cast, Sett expends all stored Grit to gain a shield and punch an area, dealing true damage in the center and physical damage on the sides." + Environment.NewLine + Environment.NewLine;
+             "瑟提是一名强力的重装战士：更高的基础生命值，更高的成长生命值，以及一系列与生命值有关的战斗能力。<color=#CCD3E0>" + Environment.NewLine + Environment.NewLine
+             + "< ! >瑟提的基础攻击会在左右拳之间交替。虽然他的基础伤害不高，但是他的拳头会带有与他生命值上限有关的伤害，并且瑟提可以一边奔跑一边出拳。通过提升他的生命值，他的每一拳都将造成极为可观的伤害。" + Environment.NewLine + Environment.NewLine
+             + "< ! >瑟提可以将他周围的敌人拉向他。如果他的敌人都在一侧，那么敌人将会减速而不是眩晕。你可以在将敌人拉到身旁之后释放 [叹为观止] ，将会对敌人造成毁灭性打击。" + Environment.NewLine + Environment.NewLine
+             + "< ! >[叹为观止] 是瑟提的成名技。在释放这一技能后，瑟提将会抓起一名面前的敌人，将其带至空中，然后砸向大地，造成与瑟提最大生命值以及敌人最大生命值有关的伤害。提升瑟提的生命值，这一技能将对敌人造成巨额伤害。" + Environment.NewLine + Environment.NewLine
+             + "< ! > 瑟提在承受伤害时会积攒拳意。释放 [蓄意轰拳] ，瑟提将会把他的拳意转化为极为可观的伤害，并且获得一个非常可靠的护盾。拳意的上限与瑟提的生命值上限有关，提升瑟提的生命值上限，让他的拳意更具威慑力。" + Environment.NewLine + Environment.NewLine;
 
         internal static void AddTokens()
         {
@@ -34,20 +34,20 @@ namespace SettMod.Modules
             LanguageAPI.Add("SETT_OUTRO_FAILURE", characterOutroFailure);
             LanguageAPI.Add("SETT_DEFAULT_SKIN_NAME", "<color=#ffa700>Sett</color>");
 
-            LanguageAPI.Add("SETT_PASSIVE_NAME", "<color=#ffa700>HEART OF THE HALF-BEAST</color>");
-            LanguageAPI.Add("SETT_PASSIVE_DESC", "Sett <color=#c9aa71>regenerates</color> an additional <color=#008744>0.25 health per second</color> <color=#d62d20>(+ 0.25 every 4 levels)</color> for every <color=#f68835>5%</color> of his <color=#d62d20>missing health.</color>");
+            LanguageAPI.Add("SETT_PASSIVE_NAME", "<color=#ffa700>沙场豪情</color>");
+            LanguageAPI.Add("SETT_PASSIVE_DESC", "瑟提每损失<color=#f68835>5%生命值</color>，获得<color=#008744>0.25/秒</color> <color=#d62d20>(+ 0.25 每4级)</color>生命恢复");
 
-            LanguageAPI.Add("SETT_PRIMARY_NAME", "<color=#ffa700>KNUCKLE DOWN</color>");
-            LanguageAPI.Add("SETT_PRIMARY_DESC", "Sett's <color=#c9aa71>basic attacks</color> alternate between a Left Punch <color=#f68835>(260% damage)</color> and a Right Punch <color=#f68835>(320% damage)</color>");
+            LanguageAPI.Add("SETT_PRIMARY_NAME", "<color=#ffa700>屈人之威</color>");
+            LanguageAPI.Add("SETT_PRIMARY_DESC", "瑟提的 <color=#c9aa71>基础攻击</color> 会交替使用他的左拳 <color=#f68835>(80%伤害+5%瑟提最大生命值)</color>和右拳<color=#f68835>(120%伤害+5%瑟提最大生命值)</color>");
 
-            LanguageAPI.Add("SETT_SECONDARY_NAME", "<color=#ffa700>FACEBREAKER</color>");
-            LanguageAPI.Add("SETT_SECONDARY_DESC", "Sett <color=#c9aa71>pulls in</color> all enemies within a <color=#0057e7>20 meter</color> radius of him, dealing <color=#f68835>380% </color>damage. <color=#c9aa71>Stun & Slows</color> on hit.");
+            LanguageAPI.Add("SETT_SECONDARY_NAME", "<color=#ffa700>强手裂颅</color>");
+            LanguageAPI.Add("SETT_SECONDARY_DESC", "瑟提将周围<color=#0057e7>20 m</color>范围内的所有敌人<color=#c9aa71>拉向</color>他，  造成 <color=#f68835>50% </color>伤害,并使敌人 <color=#c9aa71>眩晕/减速</color>");
 
-            LanguageAPI.Add("SETT_UTILITY_NAME", "<color=#ffa700>THE SHOW STOPPER</color>");
-            LanguageAPI.Add("SETT_UTILITY_DESC", "Sett <color=#c9aa71>carries</color> an enemy through the air and slams them into the ground, dealing <color=#f68835>1200%</color> <color=#d62d20>(+5% of primary target's maximum health & maximum shield)</color> damage to all enemies near where they land.");
+            LanguageAPI.Add("SETT_UTILITY_NAME", "<color=#ffa700>叹为观止</color>");
+            LanguageAPI.Add("SETT_UTILITY_DESC", "瑟提释放他的成名技， <color=#c9aa71>抓住</color> 一名敌人将其带到空中然后砸向大地, 造成<color=#f68835>300%瑟提最大生命值</color> <color=#d62d20>(+15%目标最大生命值/最大护盾值)</color> 的伤害，并对落地点附近的其他敌人造成等量伤害.");
 
-            LanguageAPI.Add("SETT_SPECIAL_NAME", "<color=#ffa700>HAYMAKER</color>");
-            LanguageAPI.Add("SETT_SPECIAL_DESC", "Sett passively stores damage he takes as <color=#ffffff>Grit</color>. On cast, Sett expends all stored <color=#ffffff>Grit</color> to gain a <color=#ffffff>Shield</color> and punch an area, dealing <color=#f68835>1600%</color> <color=#d62d20>(+50% of the expended Grit +2.5% every 4 levels)</color> <color=#ffffff>TRUE</color> damage.");
+            LanguageAPI.Add("SETT_SPECIAL_NAME", "<color=#ffa700>蓄意轰拳</color>");
+            LanguageAPI.Add("SETT_SPECIAL_DESC", "瑟提在承受攻击时积攒 <color=#ffffff>拳意</color>. 瑟提将所有的 <color=#ffffff>拳意</color> 打出，造成 <color=#f68835>400%</color><color=#d62d20>(+500% 拳意值，此加成每4级额外增加5%)</color>的<color=#ffffff>真实伤害</color>,并获得相当于全部<color=#ffffff>拳意</color>值的 <color=#ffffff>护盾</color>");
 
             LanguageAPI.Add("SETT_CONQUEROR_NAME", "<color=#ffa700>Conqueror</color>");
             LanguageAPI.Add("SETT_CONQUEROR_DESC", "<color=#c9aa71>Successful attacks & abilties</color> against enemies grant <color=#ffffff>1</color> stack of conqueror up to 12 stacks. Each stack of Conqueror grants <color=#f68835>0.6</color> <color=#d62d20>(+0.045 every 4 levels)</color> bonus base damage. While fully stacked you <color=#c9aa71>heal</color> for <color=#008744>6% of any damage from abilities dealt to enemies.</color>");

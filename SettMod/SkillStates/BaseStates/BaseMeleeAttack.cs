@@ -119,13 +119,13 @@ namespace SettMod.SkillStates.BaseStates
             {
                 this.baseDuration = 0.7f;
                 this.baseEarlyExitTime = 0.48f;
-                this.damageCoefficient = Modules.Config.leftPunchDamageCoefficient.Value;
+                this.damageCoefficient = 0.8f;
             }
             else if (this.swingIndex == 1)
             {
                 this.baseDuration = 1.2f;
                 this.baseEarlyExitTime = 0.68f;
-                this.damageCoefficient = Modules.Config.rightPunchDamageCoefficient.Value;
+                this.damageCoefficient = 1.2f;
             }
 
             this.duration = this.baseDuration / this.attackSpeedStat;
@@ -161,7 +161,7 @@ namespace SettMod.SkillStates.BaseStates
             this.attack.attacker = base.gameObject;
             this.attack.inflictor = base.gameObject;
             this.attack.teamIndex = base.GetTeam();
-            this.attack.damage = this.damageCoefficient * this.damageStat;
+            this.attack.damage = this.damageCoefficient * this.damageStat + base.characterBody.maxHealth * 0.05f;
             this.attack.procCoefficient = this.procCoefficient;
             this.attack.hitEffectPrefab = Modules.Assets.swordHitImpactEffect;
             this.attack.forceVector = this.bonusForce;

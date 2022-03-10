@@ -34,8 +34,8 @@ namespace SettMod.Modules
 
         public static void ReadConfig()
         {
-            baseHealth = SettPlugin.instance.Config.Bind<float>(new ConfigDefinition("01 - Character Stats", "Base Health"), 180f, new ConfigDescription("", null, Array.Empty<object>()));
-            healthGrowth = SettPlugin.instance.Config.Bind<float>(new ConfigDefinition("01 - Character Stats", "Health Growth"), 48f, new ConfigDescription("", null, Array.Empty<object>()));
+            baseHealth = SettPlugin.instance.Config.Bind<float>(new ConfigDefinition("01 - Character Stats", "Base Health"), 280f, new ConfigDescription("", null, Array.Empty<object>()));
+            healthGrowth = SettPlugin.instance.Config.Bind<float>(new ConfigDefinition("01 - Character Stats", "Health Growth"), 58f, new ConfigDescription("", null, Array.Empty<object>()));
 
             baseRegen = SettPlugin.instance.Config.Bind<float>(new ConfigDefinition("01 - Character Stats", "Base Health Regen"), 1f, new ConfigDescription("", null, Array.Empty<object>()));
             regenGrowth = SettPlugin.instance.Config.Bind<float>(new ConfigDefinition("01 - Character Stats", "Health Regen Growth"), 0.2f, new ConfigDescription("", null, Array.Empty<object>()));
@@ -52,23 +52,23 @@ namespace SettMod.Modules
 
             jumpCount = SettPlugin.instance.Config.Bind<int>(new ConfigDefinition("01 - Character Stats", "Jump Count"), 1, new ConfigDescription("", null, Array.Empty<object>()));
 
-            leftPunchDamageCoefficient = SettPlugin.instance.Config.Bind<float>(new ConfigDefinition("02 - Kunckle Down", "Kunckle Down Left Punch Damage Coefficient"), 2.6f, new ConfigDescription("", null, Array.Empty<object>()));
-            rightPunchDamageCoefficient = SettPlugin.instance.Config.Bind<float>(new ConfigDefinition("02 - Kunckle Down", "Kunckle Down Right Punch Damage Coefficient"), 3.2f, new ConfigDescription("", null, Array.Empty<object>()));
+            leftPunchDamageCoefficient = SettPlugin.instance.Config.Bind<float>(new ConfigDefinition("02 - Kunckle Down", "Kunckle Down Left Punch Damage Coefficient"), 0.8f, new ConfigDescription("", null, Array.Empty<object>()));
+            rightPunchDamageCoefficient = SettPlugin.instance.Config.Bind<float>(new ConfigDefinition("02 - Kunckle Down", "Kunckle Down Right Punch Damage Coefficient"), 1.2f, new ConfigDescription("", null, Array.Empty<object>()));
 
-            faceBreakerDamageCoefficient = SettPlugin.instance.Config.Bind<float>(new ConfigDefinition("03 - Face Breaker", "Face Breaker Damage Coefficient"), 3.8f, new ConfigDescription("", null, Array.Empty<object>()));
+            faceBreakerDamageCoefficient = SettPlugin.instance.Config.Bind<float>(new ConfigDefinition("03 - Face Breaker", "Face Breaker Damage Coefficient"), 0.5f, new ConfigDescription("", null, Array.Empty<object>()));
             faceBreakerPullRadius = SettPlugin.instance.Config.Bind<float>(new ConfigDefinition("03 - Face Breaker", "Face Breaker Pull Radius"), 20f, new ConfigDescription("", null, Array.Empty<object>()));
             faceBreakerPullForce = SettPlugin.instance.Config.Bind<float>(new ConfigDefinition("03 - Face Breaker", "Face Breaker Pull Force"), 200f, new ConfigDescription("", null, Array.Empty<object>()));
             faceBreakerCD = SettPlugin.instance.Config.Bind<float>(new ConfigDefinition("03 - Face Breaker", "Face Breaker Cooldown"), 7f, new ConfigDescription("", null, Array.Empty<object>()));
 
-            slamDamageCoefficient = SettPlugin.instance.Config.Bind<float>(new ConfigDefinition("04 - The Show Stopper", "The Show Stopper Damage Coefficient"), 12f, new ConfigDescription("", null, Array.Empty<object>()));
+            slamDamageCoefficient = SettPlugin.instance.Config.Bind<float>(new ConfigDefinition("04 - The Show Stopper", "The Show Stopper Damage Coefficient"), 3f, new ConfigDescription("", null, Array.Empty<object>()));
             bonusHealthCoefficient = SettPlugin.instance.Config.Bind<float>(new ConfigDefinition("04 - The Show Stopper", "The Show Stopper Bonus Damage Coefficient"), 0.05f, new ConfigDescription("Bonus Damage Based On Primary Target Maximum Health & Maximum Shield Coefficient", null, Array.Empty<object>()));
             slamRadius = SettPlugin.instance.Config.Bind<float>(new ConfigDefinition("04 - The Show Stopper", "The Show Stopper Slam Radius"), 20f, new ConfigDescription("", null, Array.Empty<object>()));
             slamForce = SettPlugin.instance.Config.Bind<float>(new ConfigDefinition("04 - The Show Stopper", "The Show Stopper Slam Force"), 500f, new ConfigDescription("", null, Array.Empty<object>()));
             slamCD = SettPlugin.instance.Config.Bind<float>(new ConfigDefinition("04 - The Show Stopper", "The Show Stopper Cooldown"), 10f, new ConfigDescription("", null, Array.Empty<object>()));
 
-            hayMakerDamageCoefficient = SettPlugin.instance.Config.Bind<float>(new ConfigDefinition("05 - Haymaker", "Haymaker Damage Coefficient"), 16f, new ConfigDescription("", null, Array.Empty<object>()));
-            hayMakerGritBonus = SettPlugin.instance.Config.Bind<float>(new ConfigDefinition("05 - Haymaker", "Haymaker Expended Grit Bonus Damage Base Coefficient"), 0.5f, new ConfigDescription("Base Expended Grit Coefficient", null, Array.Empty<object>()));
-            hayMakerGritBonusPer4 = SettPlugin.instance.Config.Bind<float>(new ConfigDefinition("05 - Haymaker", "Haymaker Additional Bonus Damage Coefficient Per 4 Levels"), 0.025f, new ConfigDescription("Additional Expended Grit Coefficient Per 4 Levels", null, Array.Empty<object>()));
+            hayMakerDamageCoefficient = SettPlugin.instance.Config.Bind<float>(new ConfigDefinition("05 - Haymaker", "Haymaker Damage Coefficient"), 4f, new ConfigDescription("", null, Array.Empty<object>()));
+            hayMakerGritBonus = SettPlugin.instance.Config.Bind<float>(new ConfigDefinition("05 - Haymaker", "Haymaker Expended Grit Bonus Damage Base Coefficient"), 5f, new ConfigDescription("Base Expended Grit Coefficient", null, Array.Empty<object>()));
+            hayMakerGritBonusPer4 = SettPlugin.instance.Config.Bind<float>(new ConfigDefinition("05 - Haymaker", "Haymaker Additional Bonus Damage Coefficient Per 4 Levels"), 0.005f, new ConfigDescription("Additional Expended Grit Coefficient Per 4 Levels", null, Array.Empty<object>()));
             hayMakerCD = SettPlugin.instance.Config.Bind<float>(new ConfigDefinition("05 - Haymaker", "Haymaker Cooldown"), 12f, new ConfigDescription("", null, Array.Empty<object>()));
         }
 

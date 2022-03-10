@@ -28,8 +28,8 @@ namespace SettMod.Modules.Survivors
             subtitleNameToken = "SETT_NAME_SUBTITLE",
             podPrefab = RoR2.LegacyResourcesAPI.Load<GameObject>("Prefabs/NetworkedObjects/SurvivorPod"),
 
-            maxHealth = Modules.Config.baseHealth.Value,
-            healthGrowth = Modules.Config.healthGrowth.Value,
+            maxHealth = 280f,
+            healthGrowth = 58f,
 
             healthRegen = Modules.Config.baseRegen.Value,
             regenGrowth = Modules.Config.regenGrowth.Value,
